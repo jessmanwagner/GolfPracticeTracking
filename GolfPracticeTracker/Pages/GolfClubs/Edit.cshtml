@@ -1,0 +1,60 @@
+﻿@page
+@model GolfPracticeTracker.Pages.GolfClubs.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>GolfClub</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="GolfClub.ID" />
+            <div class="form-group">
+                <label asp-for="GolfClub.Name" class="control-label"></label>
+                <input asp-for="GolfClub.Name" class="form-control" />
+                <span asp-validation-for="GolfClub.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GolfClub.Loft" class="control-label"></label>
+                <input asp-for="GolfClub.Loft" class="form-control" />
+                <span asp-validation-for="GolfClub.Loft" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GolfClub.Brand" class="control-label"></label>
+                <input asp-for="GolfClub.Brand" class="form-control" />
+                <span asp-validation-for="GolfClub.Brand" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GolfClub.Make" class="control-label"></label>
+                <input asp-for="GolfClub.Make" class="form-control" />
+                <span asp-validation-for="GolfClub.Make" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GolfClub.Notes" class="control-label"></label>
+                <input asp-for="GolfClub.Notes" class="form-control" />
+                <span asp-validation-for="GolfClub.Notes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GolfClub.PurchaseDate" class="control-label"></label>
+                <input asp-for="GolfClub.PurchaseDate" class="form-control" />
+                <span asp-validation-for="GolfClub.PurchaseDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
