@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
 using GolfPracticeTracker.Data;
 using GolfPracticeTracker.Models;
+using GolfPracticeTracker.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
