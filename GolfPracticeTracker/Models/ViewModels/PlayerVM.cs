@@ -1,5 +1,5 @@
 ﻿
-namespace GolfPracticeTracker.Models
+namespace GolfPracticeTracker.Models.ViewModels
 {
     public class PlayerVM
     {

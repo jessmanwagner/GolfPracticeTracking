@@ -26,8 +26,7 @@ namespace GolfPracticeTracker.Migrations
                 name: "PracticeSessions",
                 columns: table => new
                 {
-                    ID = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    ID = table.Column<int>(nullable: false),
                     PracticeDate = table.Column<DateTime>(nullable: false),
                     Altitude = table.Column<int>(nullable: false)
                 },
@@ -40,8 +39,7 @@ namespace GolfPracticeTracker.Migrations
                 name: "GolfClubs",
                 columns: table => new
                 {
-                    ID = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    ID = table.Column<int>(nullable: false),
                     Name = table.Column<string>(nullable: true),
                     Loft = table.Column<int>(nullable: false),
                     Brand = table.Column<string>(nullable: true),

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using GolfPracticeTracker.Data;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -20,7 +21,16 @@ namespace GolfPracticeTracker.Pages.GolfClubs
 
         public async Task OnGetAsync()
         {
-            GolfClub = await _context.GolfClubs.ToListAsync();
+            // Method syntax
+            GolfClub = await _context.GolfClubs
+                .Where(gc => gc.InBag &&
+                        gc.PlayerID == 1).ToListAsync();
+
+            // Query syntax
+            GolfClub = await (from gc in _context.GolfClubs
+                where gc.InBag &&
+                      gc.PlayerID == 1
+                select gc).ToListAsync(); ;
         }
     }
 }

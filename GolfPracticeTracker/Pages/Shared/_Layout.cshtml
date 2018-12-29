@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Deliberate Practice</title>
+    <title>@ViewData["Title"] - Golf Practice Tracking</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -26,16 +26,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-page="/Index" class="navbar-brand">Deliberate Practice</a>
+                <a asp-page="/Index" class="navbar-brand">Golf Practice Tracking</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a asp-page="/Index">Home</a></li>
+                    @*<li><a asp-page="/Players/Index">Players</a></li>*@
+                    <li><a asp-page="/PracticeSummary/PracticeSummary">Practice Summary</a></li>
+                    <li><a asp-page="/PracticeSessions/Index">Practices</a></li>
+                    <li><a asp-page="/GolfClubs/Index">Clubs</a></li>
                     <li><a asp-page="/About">About</a></li>
-                    <li><a asp-page="/Players/Index">Players</a></li>
-                    <li><a asp-page="/Clubs/Index">Clubs</a></li>
-                    <li><a asp-page="/Practices/Index">Practices</a></li>
-                    <li><a asp-page="/GolfShots/Index">GolfShots</a></li>
                 </ul>
             </div>
         </div>
@@ -47,7 +47,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2018 - Deliberate Practice</p>
+            <p>&copy; 2018 - Golf Practice Tracking</p>
         </footer>
     </div>
 

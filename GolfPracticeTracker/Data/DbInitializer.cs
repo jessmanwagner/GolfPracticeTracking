@@ -34,6 +34,7 @@ namespace GolfPracticeTracker.Data
             {
                 new GolfClub //1
                 {
+                    ID = 1,
                     Brand = "Ping",
                     Make = "G25",
                     Loft = 9,
@@ -44,6 +45,7 @@ namespace GolfPracticeTracker.Data
                 },
                 new GolfClub
                 {
+                    ID = 2,
                     Brand = "Ping",
                     Make = "G25",
                     Loft = 18,
@@ -54,6 +56,7 @@ namespace GolfPracticeTracker.Data
                 },
                 new GolfClub //3
                 {
+                    ID = 3,
                     Brand = "TaylorMade",
                     Make = "P790",
                     Loft = 23,
@@ -64,6 +67,7 @@ namespace GolfPracticeTracker.Data
                 },
                 new GolfClub
                 {
+                    ID = 4,
                     Brand = "TaylorMade",
                     Make = "P790",
                     Loft = 23,
@@ -74,6 +78,7 @@ namespace GolfPracticeTracker.Data
                 },
                 new GolfClub //5
                 {
+                    ID = 5,
                     Brand = "TaylorMade",
                     Make = "P790",
                     Loft = 23,
@@ -84,6 +89,7 @@ namespace GolfPracticeTracker.Data
                 },
                 new GolfClub
                 {
+                    ID = 6,
                     Brand = "TaylorMade",
                     Make = "P790",
                     Loft = 23,
@@ -94,6 +100,7 @@ namespace GolfPracticeTracker.Data
                 },
                 new GolfClub //7
                 {
+                    ID = 7,
                     Brand = "TaylorMade",
                     Make = "P790",
                     Loft = 23,
@@ -104,6 +111,7 @@ namespace GolfPracticeTracker.Data
                 },
                 new GolfClub //8
                 {
+                    ID = 8,
                     Brand = "TaylorMade",
                     Make = "P790",
                     Loft = 23,
@@ -114,6 +122,7 @@ namespace GolfPracticeTracker.Data
                 },
                 new GolfClub
                 {
+                    ID = 9,
                     Brand = "TaylorMade",
                     Make = "P790",
                     Loft = 23,
@@ -124,6 +133,7 @@ namespace GolfPracticeTracker.Data
                 },
                 new GolfClub //10
                 {
+                    ID =10,
                     Brand = "TaylorMade",
                     Make = "P790",
                     Loft = 23,
@@ -134,6 +144,7 @@ namespace GolfPracticeTracker.Data
                 },
                 new GolfClub //11
                 {
+                    ID = 11,
                     Brand = "Callaway",
                     Make = "MackDaddy",
                     Loft = 52,
@@ -144,6 +155,7 @@ namespace GolfPracticeTracker.Data
                 },
                 new GolfClub //12
                 {
+                    ID = 12,
                     Brand = "Callaway",
                     Make = "MackDaddy",
                     Loft = 56,
@@ -154,6 +166,7 @@ namespace GolfPracticeTracker.Data
                 },
                 new GolfClub //13
                 {
+                    ID = 13,
                     Brand = "Callaway",
                     Make = "MackDaddy",
                     Loft = 60,
@@ -164,6 +177,7 @@ namespace GolfPracticeTracker.Data
                 },
                 new GolfClub //14 //wedge not in bag
                 {
+                    ID = 14,
                     Brand = "Cleveland",
                     Make = "Xxx",
                     Loft = 54,
@@ -174,6 +188,7 @@ namespace GolfPracticeTracker.Data
                 },
                 new GolfClub //15
                 {
+                    ID = 15,
                     Brand = "Cleveland",
                     Make = "Xxx",
                     Loft = 58,
@@ -184,6 +199,7 @@ namespace GolfPracticeTracker.Data
                 },
                 new GolfClub //Row 16 //Club 1
                 {
+                    ID = 16,
                     Brand = "Ping",
                     Make = "G25",
                     Loft = 9,
@@ -194,6 +210,7 @@ namespace GolfPracticeTracker.Data
                 },
                 new GolfClub //Row 17 //Club 2
                 {
+                    ID = 17,
                     Brand = "Ping",
                     Make = "G25",
                     Loft = 18,
@@ -204,6 +221,7 @@ namespace GolfPracticeTracker.Data
                 },
                 new GolfClub //Row 18 //Club 3
                 {
+                    ID = 18,
                     Brand = "Ping",
                     Make = "P790",
                     Loft = 23,
@@ -214,6 +232,7 @@ namespace GolfPracticeTracker.Data
                 },
                 new GolfClub //Row 19 //Club 4
                 {
+                    ID = 19,
                     Brand = "Ping",
                     Make = "P790",
                     Loft = 23,
@@ -224,6 +243,7 @@ namespace GolfPracticeTracker.Data
                 },
                 new GolfClub //Row 20 //Club 5
                 {
+                    ID = 20,
                     Brand = "Ping",
                     Make = "P790",
                     Loft = 23,
@@ -234,6 +254,7 @@ namespace GolfPracticeTracker.Data
                 },
                 new GolfClub //Row 21 Club 6
                 {
+                    ID = 21,
                     Brand = "Ping",
                     Make = "P790",
                     Loft = 23,
@@ -244,6 +265,7 @@ namespace GolfPracticeTracker.Data
                 },
                 new GolfClub //Row 22 Club 7
                 {
+                    ID = 22,
                     Brand = "Ping",
                     Make = "P790",
                     Loft = 23,
@@ -254,6 +276,7 @@ namespace GolfPracticeTracker.Data
                 },
                 new GolfClub //Row 23 Club 8
                 {
+                    ID = 23,
                     Brand = "Ping",
                     Make = "P790",
                     Loft = 23,
@@ -264,6 +287,7 @@ namespace GolfPracticeTracker.Data
                 },
                 new GolfClub //Row 24 Club 9
                 {
+                    ID = 24,
                     Brand = "Ping",
                     Make = "P790",
                     Loft = 23,
@@ -274,6 +298,7 @@ namespace GolfPracticeTracker.Data
                 },
                 new GolfClub //Row 25 Club 10 
                 {
+                    ID = 25,
                     Brand = "Ping",
                     Make = "P790",
                     Loft = 23,
@@ -284,6 +309,7 @@ namespace GolfPracticeTracker.Data
                 },
                 new GolfClub //Row 26 Club 11
                 {
+                    ID = 26,
                     Brand = "Ping",
                     Make = "MackDaddy",
                     Loft = 52,
@@ -294,6 +320,7 @@ namespace GolfPracticeTracker.Data
                 },
                 new GolfClub //Row 27 Club 12
                 {
+                    ID = 27,
                     Brand = "Ping",
                     Make = "MackDaddy",
                     Loft = 56,
@@ -304,6 +331,7 @@ namespace GolfPracticeTracker.Data
                 },
                 new GolfClub //Row 28 Club 13
                 {
+                    ID = 28,
                     Brand = "Ping",
                     Make = "MackDaddy",
                     Loft = 60,
@@ -314,6 +342,7 @@ namespace GolfPracticeTracker.Data
                 },
                 new GolfClub //Row 29 Club 14 - wedge not in bag
                 {
+                    ID = 29,
                     Brand = "Ping",
                     Make = "Xxx",
                     Loft = 54,
@@ -324,6 +353,7 @@ namespace GolfPracticeTracker.Data
                 },
                 new GolfClub //Row 30 Club 15
                 {
+                    ID = 30,
                     Brand = "Ping",
                     Make = "Xxx",
                     Loft = 58,
@@ -344,6 +374,7 @@ namespace GolfPracticeTracker.Data
             {
                 new PracticeSession // 1
                 {
+                    ID = 1,
                     Altitude = 5280,
                     //GolfClubID = 7,
                     //PlayerID = 1,
@@ -351,6 +382,7 @@ namespace GolfPracticeTracker.Data
                 },
                 new PracticeSession //2
                 {
+                    ID = 2,
                     Altitude = 5280,
                     //GolfClubID = 10,
                     //PlayerID = 1,
@@ -358,6 +390,7 @@ namespace GolfPracticeTracker.Data
                 },
                 new PracticeSession //3
                 {
+                    ID = 3,
                     Altitude = 5280,
                     //GolfClubID = 10,
                     //PlayerID = 1,
@@ -365,6 +398,7 @@ namespace GolfPracticeTracker.Data
                 },
                 new PracticeSession //4
                 {
+                    ID = 4,
                     Altitude = 5280,
                     //GolfClubID = 10,
                     //PlayerID = 1,
@@ -372,6 +406,7 @@ namespace GolfPracticeTracker.Data
                 },
                 new PracticeSession //5
                 {
+                    ID = 5,
                     Altitude = 5280,
                     //GolfClubID = 6,
                     //PlayerID = 1,
@@ -379,6 +414,7 @@ namespace GolfPracticeTracker.Data
                 },
                 new PracticeSession //6
                 {
+                    ID = 6,
                     Altitude = 5280,
                     //GolfClubID = 10,
                     //PlayerID = 2,
@@ -386,6 +422,7 @@ namespace GolfPracticeTracker.Data
                 },
                 new PracticeSession //7
                 {
+                    ID = 7,
                     Altitude = 5280,
                     //GolfClubID = 10,
                     //PlayerID = 2,
@@ -393,6 +430,7 @@ namespace GolfPracticeTracker.Data
                 },
                 new PracticeSession //8
                 {
+                    ID = 8,
                     Altitude = 5280,
                     //GolfClubID = 6,
                     //PlayerID = 2,

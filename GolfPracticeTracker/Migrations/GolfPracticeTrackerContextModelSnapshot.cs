@@ -21,9 +21,7 @@ namespace GolfPracticeTracker.Migrations
 
             modelBuilder.Entity("GolfPracticeTracker.Models.GolfClub", b =>
                 {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<int>("ID");
 
                     b.Property<string>("Brand");
 
@@ -138,9 +136,7 @@ namespace GolfPracticeTracker.Migrations
 
             modelBuilder.Entity("GolfPracticeTracker.Models.PracticeSession", b =>
                 {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<int>("ID");
 
                     b.Property<int>("Altitude");
 

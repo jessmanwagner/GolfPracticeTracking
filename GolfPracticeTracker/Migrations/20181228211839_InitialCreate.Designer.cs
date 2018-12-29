@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GolfPracticeTracker.Migrations
 {
     [DbContext(typeof(GolfPracticeTrackerContext))]
-    [Migration("20181222185216_InitialCreate")]
+    [Migration("20181228211839_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -23,9 +23,7 @@ namespace GolfPracticeTracker.Migrations
 
             modelBuilder.Entity("GolfPracticeTracker.Models.GolfClub", b =>
                 {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<int>("ID");
 
                     b.Property<string>("Brand");
 
@@ -140,9 +138,7 @@ namespace GolfPracticeTracker.Migrations
 
             modelBuilder.Entity("GolfPracticeTracker.Models.PracticeSession", b =>
                 {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<int>("ID");
 
                     b.Property<int>("Altitude");
 
