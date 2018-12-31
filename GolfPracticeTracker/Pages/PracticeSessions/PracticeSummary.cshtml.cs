@@ -5,10 +5,12 @@ using System.Threading.Tasks;
 using GolfPracticeTracker.Data;
 using GolfPracticeTracker.Models;
 using GolfPracticeTracker.Models.ViewModels;
+using GolfPracticeTracker.Utilities;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
-namespace GolfPracticeTracker.Pages.PracticeSummary
+namespace GolfPracticeTracker.Pages.PracticeSessions
 {
     public class PracticeSummaryModel : PageModel
     {
@@ -18,6 +20,11 @@ namespace GolfPracticeTracker.Pages.PracticeSummary
         {
             _context = context;
         }
+
+        [BindProperty]
+        public FileUpload FileUpload { get; set; }
+
+        public IList<SkyTrakCsvFile> SkyTrakCsvFiles { get; private set; }
 
         public List<PracticeSummaryVM> PracticeSummaryList { get; set; }
 
@@ -80,6 +87,36 @@ namespace GolfPracticeTracker.Pages.PracticeSummary
                     PracticeSummaryList.Add(practiceSummary);
                 }
             }
+        }
+
+        public async Task<IActionResult> OnPostAsync()
+        {
+            var publicScheduleData =
+                await FileHelpers.ProcessFormFile(FileUpload.UploadSkyTrakFile, ModelState);
+
+            // Perform a second check to catch ProcessFormFile method
+            // violations.
+            if (!ModelState.IsValid)
+            {
+                //SkyTrakCsvFiles = await _context.Schedule.AsNoTracking().ToListAsync();
+                return Page();
+            }
+
+            var practiceSession = new PracticeSession();
+            var playerPracticeSession = new PlayerPracticeSessionAssignment();
+            var golfShots = new List<GolfShot>();
+            //var schedule = new Schedule()
+            //{
+            //    PublicSchedule = publicScheduleData,
+            //    PublicScheduleSize = FileUpload.UploadPublicSchedule.Length,
+            //    Title = FileUpload.Title,
+            //    UploadDT = DateTime.UtcNow
+            //};
+
+            //_context.Schedule.Add(schedule);
+            //await _context.SaveChangesAsync();
+
+            return RedirectToPage("./PracticeSummary");
         }
 
         // Todo: multiple Enumerations - resolve

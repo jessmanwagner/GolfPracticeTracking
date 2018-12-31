@@ -1,0 +1,90 @@
+﻿@page
+@model GolfPracticeTracker.Pages.PracticeSessions.PracticeSummaryModel
+@{
+    ViewData["Title"] = "PracticeSummary";
+}
+
+<header>
+    <h4>Practice Summary</h4>
+    <h5>@Html.DisplayFor(modelItem => modelItem.PlayerName)</h5>
+</header>
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <div class="input-group">
+                    <label asp-for="FileUpload.UploadSkyTrakFile" class="control-label"></label>
+                    <input asp-for="FileUpload.UploadSkyTrakFile" type="file" class="form-control" style="height: auto" />
+                    <span asp-validation-for="FileUpload.UploadSkyTrakFile" class="text-danger"></span>
+                    <span class="input-group-btn">
+                        <input type="submit" value="Upload" class="btn btn-success" />
+                    </span>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<form asp-page="./Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            @*  ***** Implement Sort functionality for Practice Sessions
+                Find by name:
+                <input type="text" name="SearchString" value="@Model.CurrentFilter" />
+                <input type="submit" value="Search" class="btn btn-default" />
+                <a asp-page="./Index">Back to full List</a>*@
+        </p>
+    </div>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Club</th>
+            <th>Carry</th>
+            <th>Total</th>
+            <th>Off L</th>
+            <th>Off R</th>
+            <th># Shots</th>
+            <th>
+                @*<a asp-page="./Index"
+                        asp-route-sortOrder="@Model.NameSort"
+                       asp-route-currentFilter="@Model.CurrentFilter">
+                        @Html.DisplayNameFor(model => model.Player[0].LastName)
+                    </a>*@
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var practice in Model.PracticeSummaryList)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => practice.PracticeDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => practice.ClubName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => practice.CarryAveYds)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => practice.TotalAveYds)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => practice.OfflineLeft)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => practice.OfflineRight)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => practice.NumberOfShots)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

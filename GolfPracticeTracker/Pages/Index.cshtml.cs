@@ -47,6 +47,7 @@ namespace GolfPracticeTracker.Pages
                 var practiceSessionAssignments =
                     _context.PlayerPracticeSessionAssignments.Where(p => p.PlayerID == PlayerID);
 
+                // Get a list of all practice sessions and statistics for player
                 var practicesWithShotAggregates = playerPracticeSessions
                     .Join(practiceSessionAssignments, ps => ps.ID, psa => psa.PlayerPracticeSessionAssignmentID,
                         (ps, psa) => new {ps, psa})
@@ -66,6 +67,7 @@ namespace GolfPracticeTracker.Pages
                     }).ToList();
 
                 // Todo: write this in method syntax and write all other LINQ queries in sql syntax for practice
+                // Flatten the golf shots for each practice session into a single value and then get average
                 var clubsWithAverages = from practiceAggregates in practicesWithShotAggregates
                     group practiceAggregates by practiceAggregates.ClubName
                     into groupedClubs
@@ -81,6 +83,7 @@ namespace GolfPracticeTracker.Pages
                         NumberOfShotsRight = groupedClubs.Sum(shot => shot.NumberOfShotsRight),
                     };
 
+                // Build the view model to display the averages for each (active) club in the bag
                 ClubAverages = new List<PracticeSummaryVM>();
                 foreach (var golfClub in golfClubs)
                 {
