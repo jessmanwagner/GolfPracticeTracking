@@ -6,6 +6,7 @@
     <title>@ViewData["Title"] - Golf Practice Tracking</title>
 
     <environment include="Development">
+        <link rel="stylesheet" href="https://use.typekit.net/idk3wns.css">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
     </environment>
@@ -30,12 +31,13 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-page="/Index">Home</a></li>
+                    <li><a asp-page="/Index">Club Averages</a></li>
                     @*<li><a asp-page="/Players/Index">Players</a></li>*@
                     <li><a asp-page="/PracticeSummary/PracticeSummary">Practice Summary</a></li>
-                    <li><a asp-page="/PracticeSessions/Index">Practices</a></li>
+                    <li><a asp-page="/NewPracticeData/NewPracticeData">New Practice Data</a></li>
+                    @*<li><a asp-page="/PracticeSessions/Index">Practices</a></li>
                     <li><a asp-page="/GolfClubs/Index">Clubs</a></li>
-                    <li><a asp-page="/About">About</a></li>
+                    <li><a asp-page="/About">About</a></li>*@
                 </ul>
             </div>
         </div>

@@ -35,3 +35,17 @@ body {
         display: none;
     }
 }
+
+* {
+    font-size: 13px
+}
+
+header > h5 {
+    display: inline-block;
+}
+
+header span {
+    margin-left: 50px;
+    float: right;
+    padding-top: 10px;
+}

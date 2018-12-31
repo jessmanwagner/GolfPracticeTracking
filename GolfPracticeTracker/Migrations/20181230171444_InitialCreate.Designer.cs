@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GolfPracticeTracker.Migrations
 {
     [DbContext(typeof(GolfPracticeTrackerContext))]
-    [Migration("20181228211839_InitialCreate")]
+    [Migration("20181230171444_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -43,6 +43,10 @@ namespace GolfPracticeTracker.Migrations
 
                     b.Property<DateTime>("PurchaseDate");
 
+                    b.Property<int>("SortOrder");
+
+                    b.Property<string>("Type");
+
                     b.HasKey("ID");
 
                     b.HasIndex("PlayerID");
@@ -66,13 +70,13 @@ namespace GolfPracticeTracker.Migrations
 
                     b.Property<double>("ClubMph");
 
-                    b.Property<int>("DescentDegree");
+                    b.Property<int>("DescentDeg");
 
                     b.Property<double>("FlightSeconds");
 
                     b.Property<double>("HeightYards");
 
-                    b.Property<double>("LaunchDegree");
+                    b.Property<double>("LaunchDeg");
 
                     b.Property<int>("OfflineYards");
 
@@ -84,7 +88,7 @@ namespace GolfPracticeTracker.Migrations
 
                     b.Property<int>("ShotNumber");
 
-                    b.Property<double>("SideDegree");
+                    b.Property<double>("SideDeg");
 
                     b.Property<int>("SideSpinRpm");
 
