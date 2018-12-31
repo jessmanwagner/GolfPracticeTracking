@@ -4,7 +4,10 @@
     ViewData["Title"] = "PracticeSummary";
 }
 
-<h4>Practice Summary - @Html.DisplayFor(modelItem => modelItem.PlayerName)</h4>
+<header>
+    <h4>Practice Summary</h4>
+    <h5>@Html.DisplayFor(modelItem => modelItem.PlayerName)</h5>
+</header>
 
 <form asp-page="./Index" method="get">
     <div class="form-actions no-color">
@@ -23,11 +26,11 @@
         <tr>
             <th>Date</th>
             <th>Club</th>
-            <th>Carry Yds</th>
-            <th>Total Yds</th>
-            <th>Off Lt</th>
-            <th>Off Rt</th>
-            <th>Shots</th>
+            <th>Carry</th>
+            <th>Total</th>
+            <th>Off L</th>
+            <th>Off R</th>
+            <th># Shots</th>
             <th>
                 @*<a asp-page="./Index"
                 asp-route-sortOrder="@Model.NameSort"

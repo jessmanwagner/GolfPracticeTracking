@@ -1,52 +1,45 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Dashboard";
+    ViewData["Title"] = "Club Averages";
 }
 
-<div>
-    <h4>Jessman Wagner</h4>  @*Todo: Replace with logged in user*@
-</div>
+<header>
+    <h4>Club Averages</h4>  @*Todo: Replace with logged in user*@
+    <h5>@Html.DisplayFor(modelItem => modelItem.PlayerName)</h5>
+    <span><a asp-page="/NewPracticeData/NewPracticeData">New Practice Data</a></span>
+</header>
 <table class="table">
     <thead>
         <tr>
             <th>Club</th>
             <th>Carry</th>
             <th>Total</th>
-            <th>Diff</th>
             <th>Off L</th>
             <th>Off R</th>
-            <th>Last Practice</th>
+            <th># L</th>
+            <th># R</th>
         </tr>
     </thead>
     <tbody>
-        @*@foreach (var club in Model.ClubAverages)
+        @foreach (var club in Model.ClubAverages)
         {
             //string selectedRow = "";
             //if (club.ID = Model.ClubID)
             //{
             //    selectedRow = "success";
             //}
+            //tr class="@selectedRow ">
 
-        <tr class="@selectedRow ">
-            <td></td>
-            <td></td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
+        <tr>
+            <td>@Html.DisplayFor(modelClub => club.ClubName)</td>
+            <td>@Html.DisplayFor(modelClub => club.CarryAveYds)</td>
+            <td>@Html.DisplayFor(modelClub => club.TotalAveYds)</td>
+            <td>@Html.DisplayFor(modelClub => club.OfflineLeft)</td>
+            <td>@Html.DisplayFor(modelClub => club.OfflineRight)</td>
+            <td>@Html.DisplayFor(modelClub => club.NumberOfShotsLeft)</td>
+            <td>@Html.DisplayFor(modelClub => club.NumberOfShotsRight)</td>
         </tr>
-        }*@
+        }
     </tbody>
 </table>

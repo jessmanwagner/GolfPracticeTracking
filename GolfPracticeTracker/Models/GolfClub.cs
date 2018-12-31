@@ -20,6 +20,9 @@ namespace GolfPracticeTracker.Models
         [DisplayFormat(DataFormatString = "{0:dd-MM-yy}", ApplyFormatInEditMode = true)]
         public DateTime PurchaseDate { get; set; }
         public int PlayerID { get; set; }
+        public int SortOrder { get; set; }
+        // Todo: Implement this for a secondary sort order?  Wedges first?  Categorize clubs?
+        public string Type { get; set; }    // Wood = 1, Hybrid = 2 Iron =3, Wedge = 4
 
         //Navigation Properties
         public Player Player { get; set; }

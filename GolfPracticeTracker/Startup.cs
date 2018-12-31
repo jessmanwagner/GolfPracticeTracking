@@ -30,6 +30,20 @@ namespace GolfPracticeTracker
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            // For now, I'll just use the index page and default routing to show the dashboard.  To change the default landing page:
+            // In the AddRazorPagesOptions() method, we can set things like route conventions and the root directory for pages.
+            // It turns out that, to set a default route for a page, you execute this call:
+            //  public void ConfigureServices(IServiceCollection services)
+            //  {
+            //      services.AddMvc().AddRazorPagesOptions(options =>
+            //      {
+            //      options.Conventions.AddPageRoute("/Employees/Index", "");
+            //      });
+            //  }   
+            //  Note the parameters for the AddPageRoute() method.The first parameter takes the path to the page for which we want 
+            //  to add a route.The second identifies the route that should map to the page.In my case, since I wanted the default page 
+            //  for the entire app to be the /Pages/Employees/Index.cshtml page, I pass in an empty string. And, voila, the page now maps correctly:
+
 
             services.AddDbContext<GolfPracticeTrackerContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("GolfPracticeTrackerContext")));
@@ -56,12 +70,3 @@ namespace GolfPracticeTracker
         }
     }
 }
-//Within that AddRazorPagesOptions() method, we can set things like route conventions and the root directory for pages.It turns out that, to set a default route for a page, you execute this call:
-//public void ConfigureServices(IServiceCollection services)
-//{
-//services.AddMvc().AddRazorPagesOptions(options =>
-//{
-//    options.Conventions.AddPageRoute("/Employees/Index", "");
-//});
-//}
-//Note the parameters for the AddPageRoute() method.The first parameter takes the path to the page for which we want to add a route.The second identifies the route that should map to the page.In my case, since I wanted the default page for the entire app to be the /Pages/Employees/Index.cshtml page, I pass in an empty string. And, voila, the page now maps correctly:

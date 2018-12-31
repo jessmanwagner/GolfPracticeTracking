@@ -17,9 +17,11 @@ namespace GolfPracticeTracker.Models.ViewModels
         public int TotalAveYds { get; set; }
         public int TotalMedianYds { get; set; }
         public int TotalModeYds { get; set; }
-        public string OfflineLeft { get; set; }
-        public string OfflineRight { get; set; }
+        public int OfflineLeft { get; set; }
+        public int OfflineRight { get; set; }
         public int NumberOfShots { get; set; }
+        public int NumberOfShotsLeft { get; set; }
+        public int NumberOfShotsRight { get; set; }
         [DisplayFormat(DataFormatString = "{0:dd-MM-yy}")]
         public DateTime PracticeDate { get; set; }
         public ICollection<GolfShot> GolfShots { get; set; }
